@@ -4,5 +4,9 @@
     <string name="app_name">EngineeringToolbox</string>
     <string name="hello_world">testing</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_subnetting">Subnetting</string>
+    <string name="net">Red</string>
+    <string name="mask">Máscara de red</string>
+
 
 </resources>
