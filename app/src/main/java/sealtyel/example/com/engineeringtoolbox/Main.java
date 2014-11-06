@@ -116,38 +116,35 @@ public class Main extends ActionBarActivity
         listDataChild = new HashMap<String, List<String>>();
 
         // Adding child data
-        listDataHeader.add("Top 250");
-        listDataHeader.add("Now Showing");
-        listDataHeader.add("Coming Soon..");
+        listDataHeader.add("Matemáticas");
+        listDataHeader.add("Programación");
+        listDataHeader.add("Redes");
+        listDataHeader.add("Electrónica");
 
         // Adding child data
-        List<String> top250 = new ArrayList<String>();
-        top250.add("The Shawshank Redemption");
-        top250.add("The Godfather");
-        top250.add("The Godfather: Part II");
-        top250.add("Pulp Fiction");
-        top250.add("The Good, the Bad and the Ugly");
-        top250.add("The Dark Knight");
-        top250.add("12 Angry Men");
+        List<String> matematicas = new ArrayList<String>();
+        matematicas.add("Formulario Derivadas e Integrales");
+        matematicas.add("Convertidor de unidades");
+        matematicas.add("Eliminación Gauss-Jordan");
+        matematicas.add("Teorema de Pitágoras");
+        matematicas.add("Operaciones básicas vectores");
 
-        List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("The Conjuring");
-        nowShowing.add("Despicable Me 2");
-        nowShowing.add("Turbo");
-        nowShowing.add("Grown Ups 2");
-        nowShowing.add("Red 2");
-        nowShowing.add("The Wolverine");
 
-        List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("2 Guns");
-        comingSoon.add("The Smurfs 2");
-        comingSoon.add("The Spectacular Now");
-        comingSoon.add("The Canyons");
-        comingSoon.add("Europa Report");
+        List<String> programacion = new ArrayList<String>();
+        programacion.add("Algoritmos de ordenación");
 
-        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
-        listDataChild.put(listDataHeader.get(1), nowShowing);
-        listDataChild.put(listDataHeader.get(2), comingSoon);
+
+        List<String> redes = new ArrayList<String>();
+        redes.add("Subnetting");
+
+        List<String> electronica = new ArrayList<String>();
+        electronica.add("Calculadora Ley de Ohm");
+
+
+        listDataChild.put(listDataHeader.get(0), matematicas); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), programacion);
+        listDataChild.put(listDataHeader.get(2), redes);
+        listDataChild.put(listDataHeader.get(3), electronica);
     }
 
 
