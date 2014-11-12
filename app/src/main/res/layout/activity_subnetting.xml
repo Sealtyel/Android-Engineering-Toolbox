@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editTextMask"
 
-        android:layout_alignTop="@+id/textViewMask"
+        android:layout_alignBottom="@+id/textViewMask"
         android:layout_centerHorizontal="true" />
 
     <Button
