@@ -22,7 +22,7 @@
         parent="@style/Widget.AppCompat.ActionBar">
 
         <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
-        <item name="android:background">#ff64b0ff</item>
+        <item name="android:background">@color/list_background_pressed</item>
         <item name="android:actionMenuTextColor">#000000</item>
 
         <!-- Support library compatibility -->
