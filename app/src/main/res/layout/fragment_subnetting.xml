@@ -6,7 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="sealtyel.example.com.engineeringtoolbox.SubnettingActivity"
+    tools:context="sealtyel.example.com.engineeringtoolbox.SubnettingFragment"
     android:id="@+id/subnettinglayout">
 
 
@@ -41,9 +41,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextMask"
-
-        android:layout_alignBottom="@+id/textViewMask"
-        android:layout_centerHorizontal="true" />
+        android:layout_toStartOf="@+id/buttonCalcularRed"
+        android:layout_above="@+id/buttonAgregarRed" />
 
     <Button
         android:layout_width="wrap_content"
@@ -51,7 +50,26 @@
         android:text="@+string/calcular"
         android:id="@+id/buttonCalcularRed"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="30sp"
+        android:id="@+id/buttonAgregarRed"
+        android:layout_toStartOf="@+id/editTextMask"
+        android:layout_below="@+id/textViewMask"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listViewRedes"
+        android:layout_below="@+id/buttonAgregarRed"
+        android:layout_alignRight="@+id/editTextRed"
+        android:layout_alignEnd="@+id/editTextRed"
+        android:layout_above="@+id/buttonCalcularRed" />
 
 </RelativeLayout>

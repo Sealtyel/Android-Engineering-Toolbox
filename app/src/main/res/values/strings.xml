@@ -9,6 +9,7 @@
     <string name="net">Red</string>
     <string name="mask">Máscara de red</string>
     <string name="calcular">Calcular</string>
+    <string name="host">Cantidad de Host</string>
 
 
 </resources>
