@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@+string/buelna"
+        android:textColor="#000000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <LinearLayout
@@ -16,9 +17,10 @@
         android:layout_height="wrap_content" >
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewNoHost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
             android:text="@+string/host" />
 
         <EditText
@@ -27,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:textColor="#000000"
             android:inputType="number" >
 
             <requestFocus />
@@ -35,3 +38,4 @@
     </LinearLayout>
 
 </LinearLayout>
+
