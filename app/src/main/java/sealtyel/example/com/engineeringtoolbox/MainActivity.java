@@ -164,13 +164,13 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new SubnettingFragment();
+			fragment = new HomeFragment();
 			break;
 		case 1:
-			fragment = new FindPeopleFragment();
+			fragment = new SubnettingFragment();
 			break;
 		case 2:
-			fragment = new PhotosFragment();
+			fragment = new OhmCalculatorFragment();
 			break;
 		case 3:
 			fragment = new CommunityFragment();
@@ -181,6 +181,9 @@ public class MainActivity extends Activity {
 		case 5:
 			fragment = new WhatsHotFragment();
 			break;
+        case 6:
+            fragment = new FindPeopleFragment();
+        break;
 
 		default:
 			break;
