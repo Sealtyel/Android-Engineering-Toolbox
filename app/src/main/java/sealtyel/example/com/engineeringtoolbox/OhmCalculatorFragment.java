@@ -1,53 +1,102 @@
 package sealtyel.example.com.engineeringtoolbox;
 
-import android.app.Activity;
-import android.net.Uri;
+
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import sealtyel.example.com.engineeringtoolbox.ohmCalculator.Circuit;
 
 
+public class OhmCalculatorFragment extends Fragment
+{
 
-public class OhmCalculatorFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.ohm
-     * @return A new instance of fragment OhmCalculatorFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static OhmCalculatorFragment newInstance(String param1, String param2) {
-        OhmCalculatorFragment fragment = new OhmCalculatorFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    public OhmCalculatorFragment() {
-        // Required empty public constructor
-    }
-
+    public OhmCalculatorFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+                             Bundle savedInstanceState)
+    {
+        View rootView=inflater.inflate(R.layout.fragment_ohm_calculator, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ohm_calculator, container, false);
+        final Button buttonCalculate = (Button) rootView.findViewById(R.id.buttonCalcularCircuito);
+        final EditText textResistance=(EditText) rootView.findViewById(R.id.editTextResistencia);
+        final EditText textVoltage=(EditText) rootView.findViewById(R.id.editTextVoltaje);
+        final EditText textCurrent=(EditText) rootView.findViewById(R.id.editTextCorriente);
+        final TextView textPower=(TextView) rootView.findViewById(R.id.textViewEnergia);
+        final Toast toast1 = android.widget.Toast.makeText(getActivity().getApplicationContext(),"Calcular",android.widget.Toast.LENGTH_SHORT);
+        buttonCalculate.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v)
+            {
+                double resistencia=0.0;
+                double voltaje=0.0;
+                double corriente=0.0;
+                Circuit c=new Circuit();
+
+                if(!textResistance.getText().toString().isEmpty())
+                {
+                    resistencia=Double.parseDouble(textResistance.getText().toString());
+                    c.setResistance(resistencia);
+                }
+                if(!textVoltage.getText().toString().isEmpty())
+                {
+                    voltaje=Double.parseDouble(textVoltage.getText().toString());
+                    c.setVoltage(voltaje);
+                }
+                if(!textCurrent.getText().toString().isEmpty())
+                {
+                    corriente=Double.parseDouble(textCurrent.getText().toString());
+                    c.setCurrent(corriente);
+                }
+
+
+
+
+                if (textResistance.getText().toString().isEmpty())
+                {
+                    toast1.setText("Resistencia=0");
+                    textResistance.setText(c.getResistance(corriente,voltaje)+"");
+                }
+                else
+                {
+                    if(textVoltage.getText().toString().isEmpty())
+                    {
+                        toast1.setText("Voltaje=0");
+                        textVoltage.setText(c.getVoltage(resistencia,corriente)+"");
+                    }
+                    else//corriente==0
+                    {
+                        if (textCurrent.getText().toString().isEmpty())
+                        {
+                            toast1.setText("Corriente=0");
+                            textCurrent.setText(c.getCurrent(voltaje,resistencia)+"");
+                        }
+
+                    }
+                }
+
+                textPower.setText(c.getCurrent()*c.getVoltage()+"");
+
+
+
+
+
+
+
+                toast1.show();
+            }
+        });
+
+
+
+        return rootView;
+
     }
 
 
