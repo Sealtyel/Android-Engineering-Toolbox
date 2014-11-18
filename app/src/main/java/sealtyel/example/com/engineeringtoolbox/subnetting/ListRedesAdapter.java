@@ -40,6 +40,7 @@ public class ListRedesAdapter extends ArrayAdapter<ElementoRed> {
        
         titulo.setText(item.getTitulo());
         final int nohost= item.getHost();
+         int variablequetengoqueborrar;
 
         if(nohost!=-1)
             host.setText(item.getHost());
