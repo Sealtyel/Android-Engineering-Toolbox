@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">EngineeringToolbox</string>
-    <string name="hello_world">Hello</string>
+    <string name="hello_world">HelloB</string>
     <string name="action_settings">Settings</string>
 
 </resources>
