@@ -34,48 +34,25 @@ public class ListRedesAdapter extends ArrayAdapter<ElementoRed> {
            convertView = LayoutInflater.from(getContext()).inflate(R.layout.row_redes, parent, false);
         }
         
-        final EditText host= (EditText) convertView.findViewById(R.id.editTextNoHost);
+        final EditText host = (EditText) convertView.findViewById(R.id.editTextNoHost);
         final TextView titulo = (TextView) convertView.findViewById(R.id.textViewTituloRed);
         final TextView texto = (TextView) convertView.findViewById(R.id.textViewNoHost);
        
         titulo.setText(item.getTitulo());
-        final int nohost= item.getHost();
-         int variablequetengoqueborrar;
+        if(item.getHost()!=-1)
+            host.setText(""+item.getHost());
 
-        if(nohost!=-1)
-            host.setText(item.getHost());
-        
-        texto.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        host.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             public void onFocusChange(View v, boolean hasFocus) {
-                if(!hasFocus) {
-                	item.setHost(Integer.parseInt(texto.getText().toString()));
-                    Log.d(null, "focus "+texto.getText().toString());
+                if (!hasFocus) {
+                    if (host.getText().length() != 0)
+                        item.setHost(Integer.parseInt(host.getText().toString()));
+                    else {
+                        item.setHost(-1);
+                        host.setText("");
+                    }
+                    Log.d(null, "on " + host.getText().toString());
                 }
-            }
-        });
-
-        texto.addTextChangedListener(new TextWatcher() {
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                // TODO Auto-generated method stub
-                item.setHost(Integer.parseInt(texto.getText().toString()));
-                Log.d(null, "after "+texto.getText().toString());
-            }
-
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // TODO Auto-generated method stub
-                item.setHost(Integer.parseInt(texto.getText().toString()));
-                Log.d(null, "before "+texto.getText().toString());
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                item.setHost(Integer.parseInt(texto.getText().toString()));
-                Log.d(null, "on "+texto.getText().toString());
-
-
 
             }
 

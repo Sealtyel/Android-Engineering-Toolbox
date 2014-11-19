@@ -2,9 +2,11 @@ package sealtyel.example.com.engineeringtoolbox;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.*;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -34,11 +36,10 @@ public class SubnettingFragment extends Fragment {
 
         Button botonCalcular = (Button) rootView.findViewById(R.id.buttonCalcularRed);
         final EditText red = (EditText) rootView.findViewById(R.id.editTextRed);
-        final EditText mascara = (EditText) rootView.findViewById(R.id.editTextMask);
         Button botonAgregar = (Button) rootView.findViewById(R.id.buttonAgregarRed);
         final ListView listaRedes = (ListView) rootView.findViewById(R.id.listViewRedes);
         values =  new ArrayList<ElementoRed>();
-        adapter = new ListRedesAdapter(getActivity().getApplication(), values);
+        adapter = new ListRedesAdapter(rootView.getContext(), values);
 
         listaRedes.setAdapter(adapter);
 
@@ -75,10 +76,14 @@ public class SubnettingFragment extends Fragment {
             }
         });
 
+
+
         return rootView;
     }
 
     public int contador(){
         return ++numeroRed;
     }
+
+
 }
