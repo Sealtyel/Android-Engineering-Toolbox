@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -103,7 +104,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter
 
 
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return true;
+        ;return true;
     }
 
 }
