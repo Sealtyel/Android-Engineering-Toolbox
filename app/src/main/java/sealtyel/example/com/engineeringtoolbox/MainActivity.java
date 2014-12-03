@@ -173,7 +173,7 @@ public class MainActivity extends Activity {
 			fragment = new OhmCalculatorFragment();
 			break;
 		case 3:
-			fragment = new CommunityFragment();
+			fragment = new ConverterFragment();
 			break;
 		case 4:
 			fragment = new PagesFragment();
