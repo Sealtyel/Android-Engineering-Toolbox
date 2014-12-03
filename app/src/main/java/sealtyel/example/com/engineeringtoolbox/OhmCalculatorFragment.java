@@ -1,6 +1,4 @@
 package sealtyel.example.com.engineeringtoolbox;
-
-
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,18 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import sealtyel.example.com.engineeringtoolbox.ohmCalculator.Circuit;
-
-
 public class OhmCalculatorFragment extends Fragment
 {
-
     public OhmCalculatorFragment() {}
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState)
     {
         View rootView=inflater.inflate(R.layout.fragment_ohm_calculator, container, false);
         // Inflate the layout for this fragment
