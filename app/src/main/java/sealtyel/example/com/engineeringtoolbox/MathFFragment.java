@@ -26,47 +26,6 @@ public class MathFFragment extends Fragment {
 
     }
 
-
-    /*
-    \\
-\frac{dc}{dx}=0\\
-\\
-\frac{dx}{dx}=1\\
-\\
-\frac{d}{dx}(u+v-w)=\frac{du}{dx}+\frac{dv}{dx}-\frac{dw}{dx}\\
-\\
-\frac{d}{dx}(cv)=c\frac{dv}{dx}
-\\
-\frac{d}{dx}(uv)=u\frac{dv}{dx}+v\frac{du}{dx}
-\\
-\frac{d}{dx}(v^{n})=nv^{n-1}\frac{dv}{dx}
-\\
-\frac{d}{dx}(x^{n})=nx^{n-1}
-\\
-\frac{d}{dx}(\frac{u}{v})=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^{2}}
-\\
-\frac{d}{dx}(\frac{u}{c})=\frac{\frac{du}{dx}}{c}
-\\
-\frac{d}{dx}(ln v)=\frac{\frac{dv}{dx}}{v}=\frac{1}{v}\frac{dv}{dx}
-\\
-\frac{d}{dx}(log v)=\frac{Log e}{v}\frac{dv}{dx}
-\\
-\frac{d}{dx}(a^{v})=a^{v}Ln a\frac{dv}{dx}
-\\
-\frac{d}{dx}(e^{v})=e^{v}\frac{dv}{dx}
-\\
-\frac{d}{dx}(u^{v})=vu^{v-1}\frac{du}{dx}+ Ln u^{v}\frac{dv}{dx}
-\\
-\frac{d}{dx}(sen v)=cos v\frac{dv}{dx}
-\\
-\frac{d}{dx}(cos v)=-sen v\frac{dv}{dx}
-\\
-\frac{d}{dx}(tan v)=sec v^{2}\frac{dv}{dx}
-\\
-\frac{d}{dx}(cotg v)=-csc v^{2}\frac{dv}{dx}
-    */
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -121,8 +80,8 @@ public class MathFFragment extends Fragment {
 
         // Adding child data
         listDataHeader.add("Calculo");
-        listDataHeader.add("Opcion 2");
-        listDataHeader.add("Opcion 3");
+        listDataHeader.add("Algebra Lineal");
+        //listDataHeader.add("Aritmet");
 
         // Adding child data
         List<String> opcion1 = new ArrayList<String>();
@@ -131,16 +90,16 @@ public class MathFFragment extends Fragment {
 
 
         List<String> opcion2 = new ArrayList<String>();
-        opcion2.add("Child 1");
-        opcion2.add("Child 2");
+        opcion2.add("Operaciones con matrices");
 
-        List<String> opcion3 = new ArrayList<String>();
+
+       /* List<String> opcion3 = new ArrayList<String>();
         opcion3.add("Child 1");
-        opcion3.add("Child 2");
+        opcion3.add("Child 2");*/
 
         listDataChild.put(listDataHeader.get(0), opcion1); // Header, Child data
         listDataChild.put(listDataHeader.get(1), opcion2);
-        listDataChild.put(listDataHeader.get(2), opcion3);
+        //listDataChild.put(listDataHeader.get(2), opcion3);
     }
 
 

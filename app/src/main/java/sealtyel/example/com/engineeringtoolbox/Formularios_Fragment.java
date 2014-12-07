@@ -28,15 +28,26 @@ public class Formularios_Fragment extends Fragment {
         Bundle bundle=this.getArguments();
 
         TextView texto= (TextView) rootView.findViewById(R.id.textViewFormularios);
-        texto.setText("Parent "+bundle.get("parent")+" child "+bundle.get("child"));
+
         ImageView imgIcon = (ImageView) rootView.findViewById(R.id.imageViewFormularios);
 
-        imgIcon.setImageResource(R.drawable.derivadas);
+
 
         switch (bundle.getInt("parent")){
-            case 0 :
+            case 0 :    switch (bundle.getInt("child")){
+                            case 0 :    texto.setText("Derivadas");
+                                        imgIcon.setImageResource(R.drawable.derivadas);
+                                        break;
+                            case 1 :    texto.setText("Integrales");
+                                        imgIcon.setImageResource(R.drawable.integrales);
+                                        break;
+                        }
                         break;
-            case 1 :
+            case 1 :    switch (bundle.getInt("child")){
+                            case 0 :    texto.setText("Operaciones con matrices");
+                                        imgIcon.setImageResource(R.drawable.matrices);
+                                        break;
+                        }
                         break;
         }
 

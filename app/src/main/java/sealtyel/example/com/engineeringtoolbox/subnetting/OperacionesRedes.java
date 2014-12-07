@@ -120,7 +120,6 @@ public class OperacionesRedes {
                 redNumeros[3] += 1;
             }
 
-            numeroBits = 0;
             mascaraSubred = new int[] { 0, 0, 0, 0, 0 };
         }
 

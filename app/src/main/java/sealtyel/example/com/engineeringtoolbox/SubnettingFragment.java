@@ -78,13 +78,7 @@ public class SubnettingFragment extends Fragment {
                     ele.setSubmascara(matrizResultado[i][4]);
                     adapterR.add(ele);
                 }
-
-
                 listaRedes.setAdapter(adapterR);
-
-
-
-
             }
         });
 
