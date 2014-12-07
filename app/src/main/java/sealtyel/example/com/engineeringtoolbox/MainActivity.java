@@ -179,7 +179,7 @@ public class MainActivity extends Activity {
 			fragment = new PagesFragment();
 			break;
 		case 5:
-			fragment = new WhatsHotFragment();
+			fragment = new MathFFragment();
 			break;
         case 6:
             fragment = new FindPeopleFragment();

@@ -28,30 +28,15 @@
         android:layout_alignParentStart="true"
        />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@+string/mask"
-        android:id="@+id/textViewMask"
-        android:layout_below="@+id/editTextRed"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="31dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextMask"
-        android:layout_toStartOf="@+id/buttonCalcularRed"
-        android:layout_above="@+id/buttonAgregarRed" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@+string/calcular"
         android:id="@+id/buttonCalcularRed"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:clickable="false"
+        android:layout_alignBottom="@+id/buttonAgregarRed"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -59,18 +44,16 @@
         android:text="+"
         android:textSize="30sp"
         android:id="@+id/buttonAgregarRed"
-        android:layout_toStartOf="@+id/editTextMask"
-        android:layout_below="@+id/textViewMask"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextRed" />
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/listViewRedes"
-        android:layout_below="@+id/buttonAgregarRed"
-        android:layout_alignRight="@+id/editTextRed"
-        android:layout_alignEnd="@+id/editTextRed"
-        android:layout_above="@+id/buttonCalcularRed" />
+        android:layout_below="@+id/buttonCalcularRed"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
