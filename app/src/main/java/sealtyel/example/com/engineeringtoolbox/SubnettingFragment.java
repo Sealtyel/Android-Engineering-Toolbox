@@ -14,7 +14,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import sealtyel.example.com.engineeringtoolbox.subnetting.ElementoRed;
+import sealtyel.example.com.engineeringtoolbox.subnetting.ElementoRedResultados;
 import sealtyel.example.com.engineeringtoolbox.subnetting.ListRedesAdapter;
+import sealtyel.example.com.engineeringtoolbox.subnetting.ListRedesResultadosAdapter;
 import sealtyel.example.com.engineeringtoolbox.subnetting.OperacionesRedes;
 
 
@@ -31,6 +33,8 @@ public class SubnettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ArrayList<ElementoRed> values;
         final ListRedesAdapter adapter;
+        ArrayList<ElementoRedResultados> valuesR;
+        final ListRedesResultadosAdapter adapterR;
 
         View rootView = inflater.inflate(R.layout.fragment_subnetting, container, false);
 
@@ -40,8 +44,9 @@ public class SubnettingFragment extends Fragment {
         final ListView listaRedes = (ListView) rootView.findViewById(R.id.listViewRedes);
         values =  new ArrayList<ElementoRed>();
         adapter = new ListRedesAdapter(rootView.getContext(), values);
+        valuesR =  new ArrayList<ElementoRedResultados>();
+        adapterR = new ListRedesResultadosAdapter(rootView.getContext(), valuesR);
 
-        listaRedes.setAdapter(adapter);
 
         botonAgregar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -50,7 +55,7 @@ public class SubnettingFragment extends Fragment {
                 red.setTitulo("Red "+contador());
                 adapter.add(red);
                 listaRedes.setAdapter(adapter);
-       }
+        }
         });
 
         botonCalcular.setOnClickListener(new View.OnClickListener() {
@@ -59,18 +64,27 @@ public class SubnettingFragment extends Fragment {
 
                 for(int i=0;i<numeroRed;i++)
                     arrayNoNodo[i]=adapter.getItem(i).getHost();
-
-                arrayNoNodo=o.ordenarArray(arrayNoNodo);
-
-                Fragment fragment =new MathFFragment();
-
-                if (fragment != null) {
-                    FragmentManager fragmentManager = getFragmentManager();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.frame_container, fragment).commit();
-                } else {
-                    Log.e("SubnettingFragment", "Error in creating fragment");
+                //Matriz resultados
+                String[][] matrizResultado=o.generarActionPerformed(red.getText().toString(),arrayNoNodo);
+                adapterR.clear();
+                adapter.clear();
+                for(int i=0;i<numeroRed;i++){
+                    ElementoRedResultados ele=new ElementoRedResultados();
+                    ele.setTitulo("Red "+(i+1));
+                    ele.setRed(matrizResultado[i][0]);
+                    ele.setLongitud(matrizResultado[i][1]);
+                    ele.setHostMinimo(matrizResultado[i][2]);
+                    ele.setHostMaximo(matrizResultado[i][3]);
+                    ele.setSubmascara(matrizResultado[i][4]);
+                    adapterR.add(ele);
                 }
+
+
+                listaRedes.setAdapter(adapterR);
+
+
+
+
             }
         });
 
