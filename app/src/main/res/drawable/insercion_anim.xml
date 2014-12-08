@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/insercion00" android:duration="20" />
+    <item android:drawable="@drawable/insercion01" android:duration="20" />
+    <item android:drawable="@drawable/insercion02" android:duration="20" />
+    <item android:drawable="@drawable/insercion03" android:duration="20" />
+    <item android:drawable="@drawable/insercion04" android:duration="20" />
+    <item android:drawable="@drawable/insercion05" android:duration="20" />
+    <item android:drawable="@drawable/insercion06" android:duration="20" />
+    <item android:drawable="@drawable/insercion07" android:duration="20" />
+    <item android:drawable="@drawable/insercion08" android:duration="20" />
+    <item android:drawable="@drawable/insercion09" android:duration="20" />
+    <item android:drawable="@drawable/insercion10" android:duration="20" />
+    <item android:drawable="@drawable/insercion11" android:duration="20" />
+    <item android:drawable="@drawable/insercion12" android:duration="20" />
+    <item android:drawable="@drawable/insercion13" android:duration="20" />
+    <item android:drawable="@drawable/insercion14" android:duration="20" />
+    <item android:drawable="@drawable/insercion15" android:duration="20" />
+    <item android:drawable="@drawable/insercion16" android:duration="20" />
+    <item android:drawable="@drawable/insercion17" android:duration="20" />
+    <item android:drawable="@drawable/insercion18" android:duration="20" />
+    <item android:drawable="@drawable/insercion19" android:duration="20" />
+    <item android:drawable="@drawable/insercion20" android:duration="20" />
+    <item android:drawable="@drawable/insercion21" android:duration="20" />
+    <item android:drawable="@drawable/insercion22" android:duration="20" />
+    <item android:drawable="@drawable/insercion23" android:duration="20" />
+    <item android:drawable="@drawable/insercion24" android:duration="20" />
+</animation-list>

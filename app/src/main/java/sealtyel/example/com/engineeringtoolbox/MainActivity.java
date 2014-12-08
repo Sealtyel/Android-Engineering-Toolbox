@@ -176,7 +176,7 @@ public class MainActivity extends Activity {
 			fragment = new ConverterFragment();
 			break;
 		case 4:
-			fragment = new PagesFragment();
+			fragment = new SortingFragment();
 			break;
 		case 5:
 			fragment = new MathFFragment();
@@ -184,7 +184,6 @@ public class MainActivity extends Activity {
         case 6:
             fragment = new FindPeopleFragment();
         break;
-
 		default:
 			break;
 		}

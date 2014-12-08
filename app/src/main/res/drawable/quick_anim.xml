@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/quick00" android:duration="20" />
+    <item android:drawable="@drawable/quick01" android:duration="20" />
+    <item android:drawable="@drawable/quick02" android:duration="20" />
+    <item android:drawable="@drawable/quick03" android:duration="20" />
+    <item android:drawable="@drawable/quick04" android:duration="20" />
+    <item android:drawable="@drawable/quick05" android:duration="20" />
+    <item android:drawable="@drawable/quick06" android:duration="20" />
+    <item android:drawable="@drawable/quick07" android:duration="20" />
+    <item android:drawable="@drawable/quick08" android:duration="20" />
+    <item android:drawable="@drawable/quick09" android:duration="20" />
+    <item android:drawable="@drawable/quick10" android:duration="20" />
+    <item android:drawable="@drawable/quick11" android:duration="20" />
+    <item android:drawable="@drawable/quick12" android:duration="20" />
+    <item android:drawable="@drawable/quick13" android:duration="20" />
+    <item android:drawable="@drawable/quick14" android:duration="20" />
+    <item android:drawable="@drawable/quick15" android:duration="20" />
+    <item android:drawable="@drawable/quick16" android:duration="20" />
+    <item android:drawable="@drawable/quick17" android:duration="20" />
+    <item android:drawable="@drawable/quick18" android:duration="20" />
+    <item android:drawable="@drawable/quick19" android:duration="20" />
+    <item android:drawable="@drawable/quick20" android:duration="20" />
+</animation-list>

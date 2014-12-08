@@ -1,7 +1,6 @@
 package sealtyel.example.com.engineeringtoolbox;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,8 +48,6 @@ public class ConverterFragment extends Fragment {
         categorias.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                String cat=categorias.getItemAtPosition(i).toString();
-                unidades.setVisibility(View.VISIBLE);
                 ArrayAdapter<String> adp = null;
                 posicionCat=i;
                 switch (i){
@@ -77,13 +74,11 @@ public class ConverterFragment extends Fragment {
         botonOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String categoria=null;
                 txt.clearFocus();
                 conv.clear();
                 convAdp.notifyDataSetChanged();
                 if(!txt.getText().toString().isEmpty()) {
                     double valor = Double.parseDouble(txt.getText().toString());
-                    categoria=categorias.getSelectedItem().toString();
                     switch (posicionCat){
                         case 0:
                             switch (posicion) {
