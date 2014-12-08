@@ -48,6 +48,7 @@ public class OperacionesRedes {
 
         for (int indice = 0; (indice < subRedesNumerosStr.length) && (band == 0); indice++)
         {
+            Log.d("Subredes",subRedesNumerosStr.length+"");
             int numeroBits = calcularNumerodeBitsRepresentarSudred(subRedesNumeros[indice])+1;
 
             String segundoOctal = convertirIntBinario(redNumeros[1]);
@@ -83,19 +84,32 @@ public class OperacionesRedes {
                break;
             }
 
+            Log.d("","Direccion Red "+ redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + redNumeros[3] + " /" + (32 - numeroBits)+" "+ convertirIntBinario(redNumeros[0]) + "." + convertirIntBinario(redNumeros[1]) + "." + convertirIntBinario(redNumeros[2]) + "." + convertirIntBinario(redNumeros[3]));
+            Log.d("","Longebilidad de Red "+ "" + subRedesNumeros[indice]+ "");
+            Log.d("","Numero de bits necesarios "+ "" + numeroBits+ "");
+            Log.d("","Host minimo"+ redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + (redNumeros[3] + 1)+" "+ convertirIntBinario(redNumeros[0]) + "." + convertirIntBinario(redNumeros[1]) + "." + convertirIntBinario(redNumeros[2]) + "." + convertirIntBinario(redNumeros[3] + 1));
+
+
 
             //direccion red
             matrizResultados[indice][0] = redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + redNumeros[3] + " /" + (32 - numeroBits);
-            //longitud
+             //longitud
             matrizResultados[indice][1] = subRedesNumeros[indice]+"";
             //host minimo
             matrizResultados[indice][2] = redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + (redNumeros[3] + 1);
             calcularMascaraSubred(numeroBits, mascaraSubred);
             calcularHostMax(numeroBits, redNumeros);
+
+            Log.d("","Host maximo "+ redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + redNumeros[3]+" "+ convertirIntBinario(redNumeros[0]) + "." + convertirIntBinario(redNumeros[1]) + "." + convertirIntBinario(redNumeros[2]) + "." + convertirIntBinario(redNumeros[3]));
+            Log.d("","Direccion de Broadcast "+ redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + (redNumeros[3] + 1)+" "+ convertirIntBinario(redNumeros[0]) + "." + convertirIntBinario(redNumeros[1]) + "." + convertirIntBinario(redNumeros[2]) + "." + convertirIntBinario(redNumeros[3] += 1));
+            Log.d("","Mascara de Subred "+ mascaraSubred[0] + "." + mascaraSubred[1] + "." + mascaraSubred[2] + "." + mascaraSubred[3]+" "+ convertirIntBinario(mascaraSubred[0]) + "." + convertirIntBinario(mascaraSubred[1]) + "." + convertirIntBinario(mascaraSubred[2]) + "." + convertirIntBinario(mascaraSubred[3]));
+
+
             //host maximo
             matrizResultados[indice][3] =redNumeros[0] + "." + redNumeros[1] + "." + redNumeros[2] + "." + redNumeros[3];
             //mascara de red
             matrizResultados[indice][4] = mascaraSubred[0] + "." + mascaraSubred[1] + "." + mascaraSubred[2] + "." + mascaraSubred[3];
+
             if (redNumeros[3] == 255) {
                 if (redNumeros[2] == 255)
                 {
@@ -120,6 +134,7 @@ public class OperacionesRedes {
                 redNumeros[3] += 1;
             }
 
+            numeroBits = 0;
             mascaraSubred = new int[] { 0, 0, 0, 0, 0 };
         }
 
