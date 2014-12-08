@@ -17,9 +17,9 @@ import sealtyel.example.com.engineeringtoolbox.R;
 import sealtyel.example.com.engineeringtoolbox.subnetting.ElementoRed;
 
 
-public class ListRedesAdapter extends ArrayAdapter<ElementoRed> {
-    
-	
+public class ListRedesAdapter extends ArrayAdapter<ElementoRed>
+{
+
 	
 	 public ListRedesAdapter(Context context, ArrayList<ElementoRed> items) {
         super(context, 0, items);

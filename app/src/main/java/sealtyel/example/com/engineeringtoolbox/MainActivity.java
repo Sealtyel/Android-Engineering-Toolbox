@@ -164,7 +164,7 @@ public class MainActivity extends Activity {
 		Fragment fragment = null;
 		switch (position) {
 		case 0:
-			fragment = new HomeFragment();
+			fragment = new GaussJordanFragment();
 			break;
 		case 1:
 			fragment = new SubnettingFragment();

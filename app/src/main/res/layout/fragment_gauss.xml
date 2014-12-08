@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Matriz:"
+        android:id="@+id/textMatriz"
+        android:textSize="45px" />
+
+    <TextView
+        android:layout_width="117dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Matriz Aumentada:"
+        android:id="@+id/textView2"
+        android:textSize="45px"
+        android:layout_below="@+id/editText02"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textMatrizA"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText00"
+        android:layout_below="@+id/textMatriz"
+        android:layout_alignParentLeft="true" />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText10"
+        android:layout_below="@+id/textMatriz"
+        android:layout_toRightOf="@id/editText00" />
+
+    <EditText
+    android:layout_width="50dip"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal|numberSigned"
+    android:maxLength="3"
+    android:id="@+id/editText20"
+    android:layout_below="@+id/textMatriz"
+    android:layout_toRightOf="@id/editText10"
+
+    />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText30"
+        android:layout_below="@+id/textMatriz"
+        android:layout_toRightOf="@id/editText20"
+
+        />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText01"
+        android:layout_below="@+id/editText00"
+
+    />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText11"
+        android:layout_toRightOf="@+id/editText01"
+        android:layout_below="@id/editText10"
+
+        />
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText21"
+        android:layout_toRightOf="@+id/editText11"
+        android:layout_below="@id/editText20"
+
+        />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText31"
+        android:layout_toRightOf="@+id/editText21"
+        android:layout_below="@id/editText30"
+
+        />
+
+    <EditText
+    android:layout_width="50dip"
+    android:layout_height="wrap_content"
+    android:inputType="numberDecimal|numberSigned"
+    android:maxLength="3"
+    android:id="@+id/editText02"
+    android:layout_below="@id/editText01"
+
+    />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText12"
+        android:layout_below="@id/editText11"
+        android:layout_toRightOf="@id/editText02"
+
+        />
+
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText22"
+        android:layout_below="@id/editText21"
+        android:layout_toRightOf="@id/editText12"
+
+        />
+    <EditText
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal|numberSigned"
+        android:maxLength="3"
+        android:id="@+id/editText32"
+        android:layout_below="@id/editText31"
+        android:layout_toRightOf="@id/editText22"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resolver"
+        android:id="@+id/buttonResolver"
+
+        android:layout_below="@+id/editText30"
+        android:layout_toRightOf="@+id/editText31"
+        />
+
+
+</RelativeLayout>

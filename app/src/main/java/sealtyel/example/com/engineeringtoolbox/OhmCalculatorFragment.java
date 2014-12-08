@@ -53,27 +53,27 @@ public class OhmCalculatorFragment extends Fragment
                 if (textResistance.getText().toString().isEmpty())
                 {
                     toast1.setText("Resistencia=0");
-                    textResistance.setText(c.getResistance(corriente,voltaje)+"");
+                    textResistance.setText(String.format("%.2f",c.getResistance(corriente,voltaje))+"");
                 }
                 else
                 {
                     if(textVoltage.getText().toString().isEmpty())
                     {
                         toast1.setText("Voltaje=0");
-                        textVoltage.setText(c.getVoltage(resistencia,corriente)+"");
+                        textVoltage.setText(String.format("%.2f",c.getVoltage(resistencia,corriente))+"");
                     }
                     else//corriente==0
                     {
                         if (textCurrent.getText().toString().isEmpty())
                         {
                             toast1.setText("Corriente=0");
-                            textCurrent.setText(c.getCurrent(voltaje,resistencia)+"");
+                            textCurrent.setText(String.format("%.2f",c.getCurrent(voltaje,resistencia))+"");
                         }
 
                     }
                 }
 
-                textPower.setText(c.getCurrent()*c.getVoltage()+"");
+                textPower.setText(String.format("%.2f",c.getCurrent()*c.getVoltage())+"");
 
 
 
