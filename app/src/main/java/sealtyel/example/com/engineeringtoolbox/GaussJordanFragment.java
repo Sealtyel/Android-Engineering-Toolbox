@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,10 +42,18 @@ public class GaussJordanFragment extends Fragment
         final TextView result=(TextView) rootView.findViewById(R.id.textMatrizA);
 
 
-
-
-
         Button boton= (Button) rootView.findViewById(R.id.buttonResolver);
+        CheckBox check= (CheckBox) rootView.findViewById(R.id.checkBoxProc);
+
+        check.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast toast1 = android.widget.Toast.makeText(getActivity().getApplicationContext(),"No disponible en version de prueba",android.widget.Toast.LENGTH_SHORT);
+                toast1.show();
+            }
+
+
+        });
+
         boton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {

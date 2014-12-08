@@ -167,5 +167,17 @@
         android:layout_toRightOf="@+id/editText31"
         />
 
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver Procedimiento"
+        android:id="@+id/checkBoxProc"
+        android:layout_below="@+id/editText31"
+        android:layout_alignLeft="@+id/buttonResolver"
+        android:layout_alignStart="@+id/buttonResolver"
+        android:checked="false"
+        android:enabled="true"
+        android:textSize="18px" />
+
 
 </RelativeLayout>
