@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/burbuja00" android:duration="20" />
+    <item android:drawable="@drawable/burbuja01" android:duration="20" />
+    <item android:drawable="@drawable/burbuja02" android:duration="20" />
+    <item android:drawable="@drawable/burbuja03" android:duration="20" />
+    <item android:drawable="@drawable/burbuja04" android:duration="20" />
+    <item android:drawable="@drawable/burbuja05" android:duration="20" />
+    <item android:drawable="@drawable/burbuja06" android:duration="20" />
+    <item android:drawable="@drawable/burbuja07" android:duration="20" />
+    <item android:drawable="@drawable/burbuja08" android:duration="20" />
+    <item android:drawable="@drawable/burbuja09" android:duration="20" />
+    <item android:drawable="@drawable/burbuja10" android:duration="20" />
+    <item android:drawable="@drawable/burbuja11" android:duration="20" />
+    <item android:drawable="@drawable/burbuja12" android:duration="20" />
+    <item android:drawable="@drawable/burbuja13" android:duration="20" />
+    <item android:drawable="@drawable/burbuja14" android:duration="20" />
+    <item android:drawable="@drawable/burbuja15" android:duration="20" />
+    <item android:drawable="@drawable/burbuja16" android:duration="20" />
+    <item android:drawable="@drawable/burbuja17" android:duration="20" />
+    <item android:drawable="@drawable/burbuja18" android:duration="20" />
+</animation-list>

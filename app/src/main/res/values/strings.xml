@@ -50,10 +50,15 @@
         <item>Onza(oz)</item>
     </string-array>
     <string-array name="Velocidad">
-        <item>Metros por segundo (m/s)</item>
-        <item>Kilometros por segundo (km/s)</item>
-        <item>Kilometros por hora (km/h)</item>
-        <item>Millas por hora (mph)</item>
+    <item>Metros por segundo (m/s)</item>
+    <item>Kilometros por segundo (km/s)</item>
+    <item>Kilometros por hora (km/h)</item>
+    <item>Millas por hora (mph)</item>
+</string-array>
+    <string-array name="Sorting">
+        <item>Burbuja</item>
+        <item>Insercion</item>
+        <item>Quick Sort</item>
     </string-array>
     <!-- Nav Drawer List Item Icons -->
     <!-- Keep them in order as the titles are in -->
