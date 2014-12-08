@@ -79,6 +79,7 @@ public class SubnettingFragment extends Fragment {
                     adapterR.add(ele);
                 }
                 listaRedes.setAdapter(adapterR);
+                numeroRed=0;
             }
         });
 
